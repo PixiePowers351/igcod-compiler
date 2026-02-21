@@ -1,0 +1,19 @@
+DECLARE Adult:INTEGER
+DECLARE Child:INTEGER
+
+OUTPUT "Please enter the number of adults "
+INPUT Adult
+OUTPUT "Please enter the number of children "
+INPUT Child
+Total ← (Adult * 9.99) + (Child * 6.99)
+
+IF (Adult + Child) >= 6
+    THEN
+        Total ← Total – (Total * 15/100)
+ENDIF
+
+OUTPUT "The total cost is ", Total
+
+Total ← ROUND(Total, 2)
+
+OUTPUT "The rounded cost is ", Total
