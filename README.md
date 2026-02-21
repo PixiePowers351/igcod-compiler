@@ -12,9 +12,9 @@ This is a fully-working interpreter that allows students to run IGCSE Pseudocode
 
 2. *Install files uploaded here,* specifically decoder.py, settings.json at least (the program will not run without settings.json)
 
-3. *Create a file with the name 'code.txt'.*
+3. *Create a file with the name 'code.txt' in the same directory as decoder.py.*
 
-4. Write the code using official pseudocode syntax, as in the [IGCSE Computer Science syllabus of 2023 - 2028](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=35). There are reference code examples available in the codeExamples folder in this repository.
+4. Write the code using official pseudocode syntax, as in the [IGCSE Computer Science syllabus of 2023 - 2028](https://www.cambridgeinternational.org/Images/697167-2026-2028-syllabus.pdf#page=35) in the code.txt file. There are reference code examples available in the codeExamples folder in this repository.
 
 5. *Once you're done, check settings.json to ensure the settings are as required for your program:* Note that in the settings.json file, the assignment operator is called a delimiter. This is an issue and I will fix this in a future build.
 
@@ -145,5 +145,6 @@ I plan on making this program more versatile than it is currently, since pseudoc
 ---
 
 If you have any bugs, suggestions or any questions regarding this program, send an email to me on pixiepowers351@gmail.com with a copy of the files in the compiler folder, specifically the code.txt file and the settings.json file, and i'll be sure to respond in a few days at least, and try to fix it in a week or so. 
+
 
 Or you could alternatively post the issue on github, but i'm less familiar with that - it's my first time using github for publishing code, but I'll be sure to check any issues posted like that too!
