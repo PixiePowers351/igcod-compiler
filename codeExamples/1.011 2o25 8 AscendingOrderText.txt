@@ -1,0 +1,16 @@
+F ← TRUE
+WHILE F DO
+    F ← FALSE
+    FOR I ← 1 TO 9
+        IF A[I, 2] > A[I + 1, 2]
+            THEN
+                T1 ← A[I, 1]
+                T2 ← A[I, 2]
+                A[I, 1] ← A[I + 1, 1]
+                A[I, 2] ← A[I + 1, 2]
+                A[I + 1, 1] ← T1
+                A[I + 1, 2] ← T2
+                F ← TRUE
+        ENDIF
+    NEXT I
+ENDWHILE
