@@ -1,0 +1,16 @@
+DECLARE X: INTEGER
+DECLARE Y:BOOLEAN
+DECLARE StudentNames : ARRAY[1:30] OF INTEGER
+DECLARE Z: INTEGER
+
+Y ← (NOT 9=9 OR 5=4)
+Y ← NOT 9=9 OR 5=4
+
+X ← 4
+StudentNames[X] ← 800/4+X
+
+FUNCTION SumSquare(Number1:INTEGER, Number2:INTEGER) RETURNS INTEGER
+    RETURN Number1 * Number1 + Number2 * Number2
+ENDFUNCTION
+
+Z ← (SumSquare(5+(X),(X*3)) + (StudentNames[(X)]))

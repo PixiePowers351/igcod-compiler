@@ -1,0 +1,1 @@
+print("h#@he9".isalnum())

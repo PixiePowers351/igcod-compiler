@@ -1,0 +1,1 @@
+[{"name":"procedureTest","code":"// This procedure swaps\n// values of X and Y\nPROCEDURE SWAP(X : INTEGER, Y : INTEGER)\n    Temp ← X // temporarily store X\n    X ← Y\n    Y ← Temp\nENDPROCEDURE","result":""}]

@@ -1,0 +1,4 @@
+- There are a few sites/apps that can execute pseudocode, but:
+    - they cant be run locally
+    - they are full of ads
+    - they 

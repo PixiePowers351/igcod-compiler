@@ -1,0 +1,78 @@
+DECLARE Player1:STRING
+DECLARE Player2:STRING
+DECLARE NumberGenerated:ARRAY[1:2, 1:100] OF INTEGER
+DECLARE Points:ARRAY[1:2] OF INTEGER
+DECLARE P1:INTEGER
+DECLARE P2:INTEGER
+
+Points[1] ← 0
+Points[2] ← 0
+
+OUTPUT "Please enter the name of player 1 " // input and validate player 1 with
+INPUT Player1 // presence check
+WHILE Player1 = "" DO
+    OUTPUT "You must enter a name, try again "
+    INPUT Player1
+ENDWHILE
+
+OUTPUT "Please enter the name of player 2 " // input and validate player 2
+INPUT Player2
+WHILE Player2 = "" DO
+    OUTPUT "You must enter a name, try again "
+    INPUT Player2
+ENDWHILE
+
+// generating the 100 random numbers for each competitor
+FOR X ← 1 TO 2
+    FOR Y ← 1 TO 100 // generates 100 random number between 1 and 6 for each player
+        NumberGenerated[X, Y] ← ROUND(RANDOM() * 5, 0) + 1
+    NEXT Y
+NEXT X
+
+//comparing the random numbers
+FOR X ← 1 TO 100
+    IF NumberGenerated[1, X] > NumberGenerated[2, X]
+        THEN
+            Points[1] ← Points[1] + 2
+        ELSE
+            IF NumberGenerated[1, X] < NumberGenerated[2, X]
+                THEN
+                    Points[2] ← Points[2] + 2
+            ENDIF
+    ENDIF
+    IF NumberGenerated[1, X] = NumberGenerated[2, X] // if tied (the same)
+        THEN
+            Points[1] ← Points[1] + 1
+            Points[2] ← Points[2] + 1
+    ENDIF
+NEXT X
+
+// if player 1 and player 2 tie
+// could be a function
+IF Points[1] = Points[2]
+    THEN
+        REPEAT
+            P1 ← ROUND(RANDOM * 6, 0) + 1
+            P2 ← ROUND(RANDOM * 6, 0) + 1
+        UNTIL P1 <> P2
+    IF P1 > P2
+        THEN
+            Points[1] ← Points[1] + 2
+        ELSE
+            Points[2] ← Points[2] + 2
+    ENDIF
+ENDIF
+
+// determine the overall winner
+IF Points[1] > Points[2]
+    THEN
+        OUTPUT "First is ", Player1
+        OUTPUT "With a total score of ", Points[1]
+        OUTPUT "Second is ", Player2
+        OUTPUT "With a total score of ", Points[2]
+    ELSE
+        OUTPUT "First is ", Player2
+        OUTPUT "With a total score of ", Points[2]
+        OUTPUT "Second is ", Player1
+        OUTPUT "With a total score of ", Points[1]
+ENDIF

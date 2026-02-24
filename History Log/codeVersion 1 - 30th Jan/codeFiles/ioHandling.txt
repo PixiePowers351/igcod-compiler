@@ -1,0 +1,3 @@
+INPUT Answer
+OUTPUT Score
+OUTPUT "You have ", Lives, " lives left"

@@ -1,0 +1,9 @@
+DECLARE X:STRING
+DECLARE A:STRING
+DECLARE Y:STRING
+DECLARE Z:STRING
+
+X ← LENGTH("Happy Days") //will return 10
+A ← LCASE(ꞌWꞌ) //will return ꞌwꞌ
+Y ← UCASE("Happy") //will return "HAPPY"
+Z ← SUBSTRING("Happy Days", 1, 5) //will return "Happy"

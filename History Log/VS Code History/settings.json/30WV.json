@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Abyss",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.accessibilitySupport": "off",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDragAndDrop": false,
+    "code-runner.runInTerminal": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontSize": 20,
+    "workbench.editor.showTabs": "single",
+    "workbench.startupEditor": "none",
+    "chat.viewSessions.enabled": false,
+    "chat.viewTitle.enabled": false,
+    "chat.viewWelcome.enabled": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
+}

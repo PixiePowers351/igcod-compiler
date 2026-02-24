@@ -1,0 +1,4 @@
+LENGTH("Happy Days")
+LCASE(ꞌWꞌ)
+UCASE("Happy")
+SUBSTRING("Happy Days", 1, 5)

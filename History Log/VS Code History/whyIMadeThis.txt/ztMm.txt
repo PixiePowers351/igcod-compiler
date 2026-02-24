@@ -1,0 +1,11 @@
+- There are a few sites/apps that can execute pseudocode, but:
+    - they cant be run locally
+    - they are full of ads / are glitchy overall
+    - they dont offer customisability, like using a different delimiter, or using PRINT instead of OUTPUT
+    - the syntax used is different to actual pseudocode syntax dictated in IGCSE syllabus
+
+- This program can:
+    - run pseducode natively on computer
+    - fast, to an extent
+    - completely free and open-source (you can check or modify the compiler code in any way you want)
+    - offers compiler settings so that you 

@@ -1,0 +1,13 @@
+DECLARE Name : STRING
+DECLARE Age : INTEGER
+DECLARE Found : BOOLEAN
+
+PROCEDURE StoreData(Name : STRING)
+    OPENFILE People.txt FOR WRITE
+    WRITEFILE People.txt, Name
+    CLOSEFILE People.txt
+ENDPROCEDURE
+
+CALL StoreData("Ali")
+CALL StoreData("Aisha")
+CALL StoreData("Ahmed")

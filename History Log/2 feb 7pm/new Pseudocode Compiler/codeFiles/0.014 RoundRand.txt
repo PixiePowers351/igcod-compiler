@@ -1,0 +1,3 @@
+DECLARE Value:INTEGER
+
+Value ← ROUND (RANDOM() * 6, 0) // returns a whole number between 0 and 6

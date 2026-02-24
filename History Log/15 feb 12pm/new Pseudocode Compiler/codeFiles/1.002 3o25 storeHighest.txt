@@ -1,0 +1,18 @@
+DECLARE Lowest:INTEGER
+DECLARE Highest:INTEGER
+DECLARE Number:INTEGER
+
+Lowest ←  900
+Highest ← 1
+FOR Count ← 1 TO 5
+    INPUT Number
+    IF Number < Lowest
+        THEN
+            Lowest ← Number
+    ENDIF
+
+    IF Number > Highest
+        THEN
+            Highest ← Number
+    ENDIF
+NEXT Count

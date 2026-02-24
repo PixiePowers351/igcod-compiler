@@ -1,0 +1,18 @@
+// Variable declarations are not required
+INPUT EmailAddress
+Start ← 1
+Valid ← FALSE
+REPEAT
+    IF SUBSTRING(EmailAddress, Start, 1) = '@'
+        THEN
+            Valid ← TRUE
+    ELSE
+        Start ← Start + 1
+    ENDIF
+UNTIL Start > LENGTH(EmailAddress) OR Valid
+IF Valid
+    THEN
+        OUTPUT EmailAddress, " is valid"
+    ELSE
+        OUTPUT EmailAddress, " is NOT valid"
+ENDIF

@@ -1,0 +1,67 @@
+{   
+    "debugMode":{"value":1, "possibleValues":[0,1],
+    "description":"Prints all stored variables at end of program"},
+
+    "displayTime":{"value":0, "possibleValues":[0,1],
+    "description":"Get time needed to run program at end."},
+
+    "delimiter":{"value":"←", "possibleValues":"input",
+    "description":"The value used to assign values to a variable.\nNormally it is an arrow, but some people may prefer an = or a different variant of an arrow."},
+
+    "runTimeDebugMode":{"value":0, "possibleValues":[0,1],
+    "description":"Displays values at specified breakpoints.\nIf no breakpoints are specified, halts at all steps."},
+
+    "breakpoints":{"value":[], "possibleValues":"inputlist",
+    "description":"Breakpoints selected by user.\nUsed when runtime debugging.\nLines start at 1 when debugging."},
+
+    "variables":{"value":[], "possibleValues":"inputlist",
+    "description":"Gets only specified values when runtime debugging.\nCan include a bit of code, will return that value."},
+
+    "caseInsensitiveVariables":{"value":0, "possibleValues":[0,1],
+    "description":"Variable names are case insensitive. Task and task are considered as the same variable, not different."},
+
+    "PRINTInsteadOfOUTPUT":{"value":"OUTPUT", "possibleValues":["OUTPUT","PRINT"],
+    "description":"Change specifier for OUTPUT to PRINT.\nWhile the IGCSE standards is to use OUTPUT, a lot of people use PRINT when writing pseudocode.\nSo I thought it best to include it in a setting somewhere."},
+
+    "codeStyle":{"value":"tabIntendation", "possibleValues":["noIntendation","spaceIntendation","tabIntendation"],
+    "description":"Select your coding style.\nnoIntendation: No intendations.\nWhile I personally hate this, a lot of people do code like this, so I included this.\n\nspaceIntendation: Intending with default IGCSE guidelines; 2 spaces in IF, CASE and 4 spaces in FOR.\n\ntabIntendation: In case spaceIndentation is a hassle, hitting tab twice is easier than pressing space 4 times anyway.\n\nNote: If you have noEndStatements enabled, you have to have an intendation option enabled."},
+
+    "noEndStatements":{"value":0,"possibleValues":[0,1],
+    "description":"Allows code to execute without ENDIF, ENDCASE, NEXT, ENDWHILE statements\nWhile you have to include end statements according to IGCSE guidelines,\nthis is cumbersome for most people, so I gave the option to disable it."},
+
+    "noNewLineOutput":{"value":0,"possibleValues":[0,1],
+    "description":"Disables outputting values in a newline after outputs.\nThis means new line has to be written manually to print in a new line."},
+
+    "whitespaceAfterComma":{"value":0,"possibleValues":[0,1],
+    "description":"If enabled, adds a whitespace after every comma.\nDefault IGCSE guidelines show that , does not add any whitespaces."},
+
+    "startIndexDefault":{"value":1,"possibleValues":[1,0],
+    "description":"Changes default start indexes in SUBSTRING to 0 instead of 1"},
+
+    "noDeclaration":{"value":1,"possibleValues":[0,1],
+    "description":"Variables/Arrays are auto-declared as they are used in code. Defaults to mutable variable type / the variable switches type based on task at hand. Default order is INTEGER/STRING. eg, 1+'1' gives 11 but 1+1 gives 2. NOTE: Errors will occur, but i've noticed recent past papers dont use declaration in example codes, so i included this just in case. Note that there might be errors for unknown variables, eg. arrays. If it starts to be used as an array, its assigned as an array, ONCE ITS FIGURED OUT IT STAYS THAT WAY. You cant just keep switching types."},
+
+    "mutableType":{"value":0,"possibleValues":[0,1],
+    "description":"Variables/Array times are mutable; can store any type of value in any variable."},
+
+    "mutableParameters":{"value":0,"possibleValues":[1,0],
+    "description":"Variables assigned to parameters are modified when calling procedures / functions (note: this is not normal program behavior in most languages, but pseudocode does this so I included this setting - for fancy terms, 0 setting refers to pass by value: the value is copied by parameter variable which is used like a local variable and then destroyed at the end of the procedure (normal procedure behavior in python and C), and 1 setting is pass-by-reference: the variables are modified within the procedure when you add them as parameters (this is a default in older languages like pascal)"},
+
+    "noTypeDeclaration":{"value":0,"possibleValues":[0,1],
+    "description":"No need to declare array/variable types, the type is auto detected as it is used."},
+
+    "auto-settings":{"value":0,"possibleValues":[0,1],
+    "description":"Check which settings user has used in code before code is interpreted\nThis is the default setting, but in case your code is not running,you can check the settings and hardcode the settings"},
+
+    "unlimitedArrays":{"value":0,"possibleValues":[0,1],
+    "description":"Can assign values to arrays outside valid range.\nUseful if you want an array that can store unlimited objects"},
+
+    "mutableArrayLen":{"value":0,"possibleValues":[0,1],
+    "description":"If value used to assign length to arrays is changed, the length of array also changes.\nMay lead to bugs in code."},
+
+    "file":{"value":"code.txt","possibleValues":"input",
+    "description":"Change file to execute."},
+
+    "reset":{"value":0, "possibleValues":"RESET",
+    "description":"Resets all settings to their default values."}
+}

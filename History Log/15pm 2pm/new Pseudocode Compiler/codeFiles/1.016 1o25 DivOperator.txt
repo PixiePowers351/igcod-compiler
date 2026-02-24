@@ -1,0 +1,5 @@
+DECLARE Count : INTEGER
+
+INPUT Number
+Count ← DIV(100, Number)
+OUTPUT Count

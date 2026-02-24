@@ -1,0 +1,10 @@
+DECLARE Answer:INTEGER
+DECLARE Score:INTEGER
+DECLARE Lives:INTEGER
+
+Score ← 10
+Lives ← 5
+
+INPUT Answer
+OUTPUT Score
+OUTPUT "You have ", Lives, " lives left"

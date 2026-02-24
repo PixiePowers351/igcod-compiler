@@ -1,0 +1,7 @@
+// This procedure swaps
+// values of X and Y
+PROCEDURE SWAP(X : INTEGER, Y : INTEGER)
+    Temp ← X // temporarily store X
+    X ← Y
+    Y ← Temp
+ENDPROCEDURE

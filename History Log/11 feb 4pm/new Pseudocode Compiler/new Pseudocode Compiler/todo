@@ -1,0 +1,18 @@
+= need to type check stuff
+= replace bug with shorter values
+= .split bug with stuff in brackets
+= check double quotes
+
+- remove unncessary new variables
+
+SETTING: string value for file text name
+- what happens in case of error when writing files?
+- dont copy \n when reading files
+
+- array dimensions > 2
+- error handling in procedures?
+
+- exclude input time from processing time in debug
+
+- breakpoints
+- error messages for common errors

@@ -1,0 +1,5 @@
+- TYPE checking everything?
+- repeating variables allowed in for loop
+- declaring local variables use same code as execCode
+- auto declare variables when assigning values if not declared already THIS CAN CAUSE ISSUES IF PROCEDURE IS RUN SO NOT DOING DIS
+ - MAYBE WRITR LOCALVar Store with ALL Variables local? for each instsnce, delete last instance when code run

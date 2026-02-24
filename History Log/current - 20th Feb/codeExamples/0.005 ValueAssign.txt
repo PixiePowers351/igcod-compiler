@@ -1,0 +1,13 @@
+DECLARE Counter : INTEGER
+DECLARE TotalToPay : INTEGER
+DECLARE NumberOfHours : INTEGER
+DECLARE HourlyRate : INTEGER
+
+Counter ← 0
+Counter ← Counter + 1
+
+TotalToPay ← 10000
+NumberOfHours ← 7
+HourlyRate ← 15
+
+TotalToPay ← NumberOfHours * HourlyRate

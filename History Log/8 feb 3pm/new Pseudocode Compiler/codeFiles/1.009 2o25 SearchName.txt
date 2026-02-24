@@ -1,0 +1,44 @@
+DECLARE Contacts : ARRAY[1:500, 1:4] OF STRING
+DECLARE Row : INTEGER
+DECLARE Column : INTEGER
+DECLARE Continue : BOOLEAN
+DECLARE Stop : BOOLEAN
+DECLARE FirstName : STRING
+DECLARE Answer:CHAR 
+
+PROCEDURE NewData(Number : INTEGER)
+    FOR Row ← 1 TO Number
+        FOR Column ← 1 TO 4
+            INPUT Contacts[Row, Column]
+        NEXT Column
+    NEXT Row
+ENDPROCEDURE
+
+INPUT MyNumber
+CALL NewData(MyNumber)
+
+Continue ← TRUE
+Stop ← FALSE
+WHILE Continue
+    Row ← 1
+    OUTPUT "Enter a first name "
+    INPUT FirstName
+    REPEAT
+        IF Contacts[Row, 1] = FirstName
+            THEN
+                FOR Column ← 1 TO 4
+                    OUTPUT Contacts[Row, 1]
+                NEXT Column
+                Stop ← TRUE
+            ELSE
+                Row ← Row + 1
+        ENDIF
+    UNTIL Stop OR Row > 500
+    OUTPUT "Search for another name? (Y or N)"
+    INPUT Answer
+    IF Answer = 'N' OR Answer = 'n'
+        THEN
+            Continue ← FALSE
+    ENDIF
+ENDWHILE
+

@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "Abyss",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "window.zoomLevel": 2,
+    "editor.accessibilitySupport": "off",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDragAndDrop": false,
+    "code-runner.runInTerminal": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false
+}

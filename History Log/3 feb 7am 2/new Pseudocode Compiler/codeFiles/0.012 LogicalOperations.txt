@@ -1,0 +1,11 @@
+DECLARE Answer:INTEGER
+DECLARE Correct:BOOLEAN
+
+Answer ← -42
+
+IF Answer < 0 OR Answer > 100
+    THEN
+        Correct ← FALSE
+    ELSE
+        Correct ← TRUE
+ENDIF

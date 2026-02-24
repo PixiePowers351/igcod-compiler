@@ -1,0 +1,23 @@
+DECLARE MySize:INTEGER
+DECLARE Default:INTEGER
+
+Default ← 60
+MySize ← 20
+
+PROCEDURE DefaultLine
+    CALL LINE(60)
+ENDPROCEDURE
+
+PROCEDURE Line(Size : INTEGER)
+    DECLARE Length : INTEGER
+    FOR Length ← 1 TO Size
+        OUTPUT '-'
+    NEXT Length
+ENDPROCEDURE
+
+IF MySize = Default
+    THEN
+        CALL DefaultLine
+    ELSE
+        CALL Line(MySize)
+ENDIF

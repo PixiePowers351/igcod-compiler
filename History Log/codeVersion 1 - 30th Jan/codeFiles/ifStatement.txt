@@ -1,0 +1,6 @@
+IF Answer < 0 OR Answer > 100
+    THEN
+        Correct ← FALSE
+    ELSE
+        Correct ← TRUE
+ENDIF

@@ -1,0 +1,2 @@
+DECLARE Hello:INTEGER
+Hello <-- Name+1

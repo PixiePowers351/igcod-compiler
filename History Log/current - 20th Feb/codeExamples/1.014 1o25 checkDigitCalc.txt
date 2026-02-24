@@ -1,0 +1,19 @@
+DECLARE Total : INTEGER
+DECLARE Digit : INTEGER
+DECLARE CheckDigit : INTEGER
+Total ← 0
+
+FOR Count ← 1 TO 5
+    OUTPUT "Please enter digit ", Count
+    INPUT Digit
+    Total ← Total + (Digit * Count)
+NEXT Count
+
+CheckDigit ← MOD(Total, 11)
+
+IF CheckDigit = 10
+    THEN
+        OUTPUT "The check digit is ",CheckDigit
+    ELSE
+        OUTPUT "The check digit is ", Count
+ENDIF

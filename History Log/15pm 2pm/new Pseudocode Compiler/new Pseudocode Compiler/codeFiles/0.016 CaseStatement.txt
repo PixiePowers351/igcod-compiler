@@ -1,0 +1,14 @@
+DECLARE Move:CHAR
+DECLARE Position:INTEGER
+
+INPUT Move
+
+Position ← 0
+
+CASE OF Move
+    ꞌWꞌ : Position ← Position – 10
+    ꞌEꞌ : Position ← Position + 10
+    ꞌAꞌ : Position ← Position – 1
+    ꞌDꞌ : Position ← Position + 1
+    OTHERWISE OUTPUT "Beep"
+ENDCASE

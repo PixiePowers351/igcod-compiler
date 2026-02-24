@@ -1,0 +1,54 @@
+intendation error: no intendation, no tab intendation
+
+CASE error in program statements
+
+unrecognised type
+using float instead of real
+using character instead of char
+using bool instead of boolean
+
+USING wrong symbols in identifiers
+using restricted keywords for identifiers, eg. CASE
+
+case insensitive variables
+trying to store wrong type values : evaluation is different
+only valid
+same TYPE and same TYPE only
+should start with capital letters
+quotation inconsistency
+cannot store in just numbers / restricted values
+
+using wrong delimiters
+using equal sign as a delimiter
+using a literal for a constant (aka, declaring  a constant using a variable value / expression / another constant)
+
+Incorrect declaration of arrays
+wrong type
+name issue as variables
+weird array indexing
+inconsistent array dimensions
+
+trying to redeclare an already declared variable
+
+wrong type in input
+wrong type in anything...
+
+expression erorr - unended operations, etc.
+using ** instead of ^ for power
+wrong type of expression
+wrong type of value given for a function, when it needs specific kind of value
+case problems in operations
+
+length for char
+
+missing ENDIF, ENDPROCEDURE, NEXT
+Wrong intendation for THEN, ELSE
+
+wrong syntax for CASE, etc.
+not closing file (warning)
+
+trying to write to a file when have to read
+operatuibs i operations
+
+error identifying in procedures
+procedures in procedures in procedures

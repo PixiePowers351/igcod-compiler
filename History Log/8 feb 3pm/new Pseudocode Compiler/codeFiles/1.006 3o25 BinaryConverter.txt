@@ -1,0 +1,12 @@
+DECLARE BinaryArray : ARRAY[1:8] OF INTEGER
+DECLARE DenaryNumber : INTEGER
+OUTPUT "Please enter a whole number between 1 and 255 inclusive "
+
+REPEAT
+    INPUT DenaryNumber
+UNTIL DenaryNumber >= 1 AND DenaryNumber <= 255
+
+FOR Count ← 8 TO 1 STEP -1
+    BinaryArray[Count] ← MOD(DenaryNumber,2)
+    DenaryNumber ← DIV(DenaryNumber,2)
+NEXT Count

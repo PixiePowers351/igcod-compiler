@@ -1,0 +1,7 @@
+DECLARE LineOfText : STRING
+OPENFILE "FileA.txt" FOR READ
+OPENFILE "FileB.txt" FOR WRITE
+READFILE "FileA.txt", LineOfText
+WRITEFILE "FileB.txt", LineOfText
+CLOSEFILE "FileA.txt"
+CLOSEFILE "FileB.txt"

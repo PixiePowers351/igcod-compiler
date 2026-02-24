@@ -1,0 +1,3 @@
+OPENFILE Attendance.txt FOR READ
+READFILE Attendance.txt, StudentAttendance
+CLOSEFILE Attendance.txt

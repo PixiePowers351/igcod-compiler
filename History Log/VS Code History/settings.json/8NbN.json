@@ -1,0 +1,103 @@
+{
+    "debugMode": {
+        "value": 1,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "Prints all stored variables at end of program"
+    },
+    "displayTime": {
+        "value": 1,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "Get time needed to run program at end."
+    },
+    "timerWarning": {
+        "value": 5,
+        "possibleValues": [
+            "",
+            "time(s)"
+        ],
+        "description": "Warn if a program is taking too long to run."
+    },
+    "delimiter": {
+        "value": "←",
+        "possibleValues": "input",
+        "description": "The value used to assign values to a variable.\nNormally it is an arrow, but some people may prefer an = or a different variant of an arrow. For multiple delimiters, add them to a list and seperate by commas: eg, ['<-', '='] "
+    },
+    "mutableParameters": {
+        "value": 1,
+        "possibleValues": [
+            1,
+            0
+        ],
+        "description": "Variables assigned to parameters are modified when calling procedures / functions (note: this is not normal program behavior in most languages, but pseudocode does this so I included this setting - for fancy terms, 0 setting refers to pass by value: the value is copied by parameter variable which is used like a local variable and then destroyed at the end of the procedure (normal procedure behavior in python and C), and 1 setting is pass-by-reference: the variables are modified within the procedure when you add them as parameters (this is a default in older languages like pascal)"
+    },
+    "noTypeDeclaration": {
+        "value": 0,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "No need to declare array/variable types, the type is auto detected as it is used. If mutable type, type of all variables are mutable - does not change"
+    },
+    "auto-settings": {
+        "value": 0,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "Check which settings user has used in code before code is interpreted\nThis is the default setting, but in case your code is not running,you can check the settings and hardcode the settings"
+    },
+    "unlimitedArrays": {
+        "value": 0,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "Can assign values to arrays outside valid range.\nUseful if you want an array that can store unlimited objects"
+    },
+    "mutableArrayLen": {
+        "value": 0,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "If value used to assign length to arrays is changed, the length of array also changes.\nMay lead to bugs in code."
+    },
+    "3D+Arrays": {
+        "value": 0,
+        "possibleValues": [
+            0,
+            1
+        ],
+        "description": "Allows greater than 2D arrays to be set for array dimensions, and be used"
+    },
+    "file": {
+        "value": "code.txt",
+        "possibleValues": "input",
+        "description": "Change file to execute."
+    },
+    "compile": {
+        "value": "ignore",
+        "possibleValues": [
+            "ignore",
+            ".py",
+            ".c",
+            ".exe",
+            ".cpp",
+            ".js",
+            ".java",
+            ".bas"
+        ],
+        "description": "Compiles the file to another language, which can be run, and viewed in an IDE. If set to ignore, the program is interpreted instead. Exe files are not viweable by an IDE but can be run. Note, some languages may have different features - eg, mutable parameters are not possible normally in python. Warnings will be given before compiling."
+    },
+    "reset": {
+        "value": 0,
+        "possibleValues": "RESET",
+        "description": "Resets all settings to their default values."
+    }
+}

@@ -1,0 +1,3 @@
+// array and variable declaration
+code
+

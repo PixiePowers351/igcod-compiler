@@ -1,0 +1,67 @@
+DECLARE Score : INTEGER
+DECLARE Highest : INTEGER
+DECLARE Lowest : INTEGER
+DECLARE Qualified : INTEGER
+DECLARE Reserve : INTEGER
+DECLARE NotQualified : INTEGER
+DECLARE CompetitorName:ARRAY[1:30] OF STRING
+DECLARE CompetitorScore:ARRAY[1:30, 1:10] OF INTEGER
+
+CompetitorName ← {FULLNAME_ARRAY}
+
+Qualified ← 0
+Reserve ← 0
+NotQualified ← 0
+FOR X ← 1 TO 30 //looping for number of competitors
+    FOR Round ← 1 TO 10 //looping for number of rounds
+        OUTPUT CompetitorName[X]
+        OUTPUT "Enter the score for the round: ", Round
+        INPUT Score
+        // validation of input for between 0 and 30 inclusive
+        WHILE Score < 0 OR Score > 30 DO
+            OUTPUT "The score must be between 0 and 30 inclusive. Please try again."
+            INPUT Score
+        ENDWHILE
+        CompetitorScore[X, Round] ← Score // adding score to 2-D array
+    NEXT Round
+NEXT X
+
+// or suitable method of determining how many competitors
+FOR X  ← 1 TO 30
+    Count  ← 0
+    Highest  ← 0
+    Score  ← 0
+    Lowest ← 999 // resetting variables for each competitor
+
+    FOR Y ← 1 TO 10 // loop through rounds
+        Score ← Score + CompetitorScore[X, Y]
+        IF CompetitorScore[X, Y] > Highest // finds highest score
+            THEN
+                Highest ← CompetitorScore[X, Y]
+        ENDIF
+        IF CompetitorScore[X, Y] < Lowest // finds lowest score
+            THEN
+                Lowest ← CompetitorScore[X, Y]
+        ENDIF
+    NEXT Y
+    Score ← Score – Highest – Lowest // calculating score to subtract highest and lowest
+
+    IF Score >= 210 // competitor has qualified
+        THEN
+            OUTPUT "Competitor ", CompetitorName[X], " has qualified"
+            Qualified ← Qualified + 1
+        ELSE
+            IF Score >= 180 AND Score <= 209 // competitor is a reserve competitor
+                THEN
+                    OUTPUT "Competitor ", CompetitorName[X], " are a reserve"
+                    Reserve ← Reserve + 1
+                ELSE
+                    OUTPUT "Competitor ", CompetitorName[X], " has not qualified" // competitor not qualified
+                    NotQualified ← NOTQualified + 1
+            ENDIF
+    ENDIF
+
+NEXT X
+OUTPUT "The number of competitors qualified is ", Qualified // output of results
+OUTPUT "The number of competitors who are a reserve is ", Reserve
+OUTPUT "The number of competitors not qualified is ", NotQualified

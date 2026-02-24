@@ -1,0 +1,10 @@
+DECLARE Adult:INTEGER
+DECLARE Child:INTEGER
+DECLARE Total:REAL
+
+OUTPUT "Please enter the number of adult tickets "
+INPUT Adult
+OUTPUT "Please enter the number of children "
+INPUT Child
+Total ← (Adult * 12.99) + (Child * 7.99) + 1.99
+OUTPUT "The total cost is ", Total

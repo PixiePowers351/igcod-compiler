@@ -1,0 +1,11 @@
+DECLARE Seconds : INTEGER
+DECLARE Minutes : INTEGER
+
+PROCEDURE Time(TotalSeconds : INTEGER)
+    Minutes ← DIV(TotalSeconds, 60)
+    Seconds ← MOD(TotalSeconds, 60)
+    OUTPUT "The number of minutes is ", Minutes
+    OUTPUT "The number of seconds is ", Seconds
+ENDPROCEDURE
+
+CALL Time(2040)

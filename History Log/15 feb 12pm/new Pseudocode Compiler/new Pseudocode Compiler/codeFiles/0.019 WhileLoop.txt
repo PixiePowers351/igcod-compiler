@@ -1,0 +1,6 @@
+DECLARE Number :INTEGER
+Number ← 88
+
+WHILE Number > 9 DO
+    Number ← Number – 9
+ENDWHILE

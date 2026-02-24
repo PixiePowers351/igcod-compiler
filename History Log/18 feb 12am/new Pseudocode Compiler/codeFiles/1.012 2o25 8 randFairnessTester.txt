@@ -1,0 +1,58 @@
+// array and variable declaration
+DECLARE RandomNumber : ARRAY[1:100000] OF INTEGER
+DECLARE CountedNumber : ARRAY[1:10, 1:2] OF INTEGER
+DECLARE Index1 : INTEGER
+DECLARE Index2 : INTEGER
+DECLARE Swap : BOOLEAN
+DECLARE Temp1 : INTEGER
+DECLARE Temp2 : INTEGER
+// generate 100000 random integers between 1 and 10, inclusive,
+// and store them in an array
+FOR Index1 ← 1 TO 100000
+    RandomNumber[Index1] ← ROUND(RANDOM() * 9, 0) + 1
+NEXT Index1
+
+// initialising the CountedNumber array
+FOR Index1 ← 1 TO 10
+    CountedNumber[Index1, 1] ← Index1
+    CountedNumber[Index1, 2] ← 0
+NEXT Index1
+
+// counting the frequency of each of the random integers
+// and storing the frequencies in an array
+FOR Index1 ← 1 TO 10
+    FOR Index2 ← 1 TO 100000
+        IF RandomNumber[Index2] = CountedNumber[Index1, 1]
+            THEN
+                CountedNumber[Index1, 2] ← CountedNumber[Index1, 2] + 1
+        ENDIF
+    NEXT Index2
+NEXT Index1
+
+// performing sort on frequencies, so the possible random numbers
+// are stored in descending order of frequency
+Swap ← TRUE
+WHILE Swap DO
+    // sort is terminated when no swaps take place during a pass
+    Swap ← FALSE
+    FOR Index1 ← 1 TO 9
+        IF CountedNumber[Index1, 2] < CountedNumber[Index1 + 1, 2]
+            THEN
+                Temp1 ← CountedNumber[Index1, 1]
+                Temp2 ← CountedNumber[Index1, 2]
+                CountedNumber[Index1, 1] ← CountedNumber[Index1 + 1, 1]
+                CountedNumber[Index1, 2] ← CountedNumber[Index1 + 1, 2]
+                CountedNumber[Index1 + 1, 1] ← Temp1
+                CountedNumber[Index1 + 1, 2] ← Temp2
+                Swap ← TRUE
+        ENDIF
+    NEXT Index1
+ENDWHILE
+
+// outputting the results, with chances for each random number
+// calculated to 4 d.p.
+// results in descending order of frequency
+FOR Index1 ← 1 TO 10
+    OUTPUT "The chance of ", CountedNumber[Index1, 1], " occurring is: "
+    OUTPUT ROUND(CountedNumber[Index1, 2]/100000, 4)
+NEXT Index1

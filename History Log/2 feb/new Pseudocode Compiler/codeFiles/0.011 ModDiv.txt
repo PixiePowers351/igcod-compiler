@@ -1,0 +1,5 @@
+DECLARE X:INTEGER
+DECLARE Y:REAL
+
+X ← DIV(10, 3) //returns 3
+Y ← MOD(10, 3) //returns 1

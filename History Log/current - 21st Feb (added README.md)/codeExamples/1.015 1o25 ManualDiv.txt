@@ -1,0 +1,10 @@
+DECLARE Count : INTEGER
+Count ← 0
+INPUT Number
+Value ← Count * Number
+WHILE Value <= 100 DO
+    Count ← Count + 1
+    Value ← Count * Number
+ENDWHILE
+Count ← Count – 1
+OUTPUT Count

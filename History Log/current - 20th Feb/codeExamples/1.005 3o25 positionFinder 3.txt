@@ -1,0 +1,25 @@
+DECLARE Position:INTEGER
+DECLARE Count:INTEGER
+DECLARE Name:STRING
+DECLARE ClassList:ARRAY[1:5] OF STRING
+
+ClassList[1] ← "Ali"
+ClassList[2] ← "Ahmed"
+ClassList[3] ← "Joodh"
+ClassList[4] ← "Aisha"
+ClassList[5] ← "Bob"
+
+Position ← -1
+Count ← 1
+OUTPUT "Please enter a name "
+INPUT Name
+REPEAT
+    IF Name = ClassList[Count]
+        THEN
+            Position ← Count
+            Count ← 6
+        ELSE
+            Count ← Count + 1
+    ENDIF
+UNTIL Count > 5
+OUTPUT Position

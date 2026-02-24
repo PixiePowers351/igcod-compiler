@@ -1,0 +1,4 @@
+REPEAT
+    OUTPUT "Please enter the password"
+    INPUT Password
+UNTIL Password = "Secret"

@@ -1,0 +1,5 @@
+DECLARE CodeStore : ARRAY[1:6] OF STRING
+DECLARE Index : INTEGER
+FOR Index ← 1 TO 6
+    CodeStore[Index] ← ""
+NEXT Index

@@ -1,0 +1,24 @@
+- There are a few sites/apps that can execute pseudocode, but:
+    - they cant be run locally
+    - they are full of ads / are glitchy overall
+    - they dont offer customisability, like using a different delimiter, or using PRINT instead of OUTPUT
+    - the syntax used is different to actual pseudocode syntax dictated in IGCSE syllabus
+
+- This program can:
+    - run pseducode natively on computer (completely offline)
+    - fast, to an extent
+    - completely free and open-source (you can check or modify the compiler code in any way you want)
+    - offers compiler settings so that you customise how the compiler runs the code
+        - eg. if you hate writing ENDIF statements, you can disable INPUT
+        - if you dont want to indent, you can do that
+        - if you dont want to declare variables and have variables be auto-declared, you can do that
+        - if you want to use PRINT instead of OUTPUT, you can do that
+        - plus a lot more features
+
+    - offers recursive code (you can use a function in a function to get an index for an array to assign a value to that index, all in one line)
+
+    - offers debugging features in case you want to test your code
+    - pseudocode syntax completely matches IGCSE standards, so you don't have to worry about learning a new syntax to run code here
+    - can save code file as txt
+
+Hope you en
