@@ -1,10 +1,11 @@
 # Pseudocode Interpreter
 This is a fully-working interpreter that allows students to run IGCSE Pseudocode, a language which is used in IGCSE Computer Science but has no formal interpreter / compiler available.
 
-*Date created:* May 2024
+*Date created:* May 2024 | 
 *Date last updated/modified:* Feb 2026
 - added error handling for FOR loop
 - added README
+- adding my history log (just in case someone wants to, you know, prove this aint ai or plagiarised or something...)
 
 ## How to run the program
 
@@ -148,3 +149,4 @@ If you have any bugs, suggestions or any questions regarding this program, send 
 
 
 Or you could alternatively post the issue on github, but i'm less familiar with that - it's my first time using github for publishing code, but I'll be sure to check any issues posted like that too!
+
