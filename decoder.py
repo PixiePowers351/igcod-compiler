@@ -98,7 +98,7 @@ def varReplace(value,originalValue,replaceValue):
 
     x = 0
     while x < len(value) - 1:
-        if (len(value[x]) >0 and value[x][-1].isalpha()) or (len(value[x+1]) > 0 and value[x+1][0].isalpha()) or value[x].count('"')%2!=0 or value[x].count('"')%2!=0 or value[x].count("'")%2!=0 or value[x].count("'")%2!=0:
+        if (len(value[x]) >0 and value[x][-1].isalnum()) or (len(value[x+1]) > 0 and value[x+1][0].isalnum()) or value[x].count('"')%2!=0 or value[x].count('"')%2!=0 or value[x].count("'")%2!=0 or value[x].count("'")%2!=0:
             value[x] = value[x] + originalValue + value[x+1]
             value.pop(x+1)
         else:
